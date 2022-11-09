@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreOrderRequest;
+use App\Domains\Order\OrderService;
 
 class OrderController extends Controller
 {
@@ -31,12 +32,17 @@ class OrderController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Domains\Order\OrderService $order_service
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOrderRequest $request)
+    public function store(StoreOrderRequest $request,OrderService $order_service)
     {
+        // Retrieve the validated input data...
         $validated = $request->validated();
-        return $request->all();
+        return response()->json([
+            'order' => $order_service->createOrder($validated['products']),
+            'message' => 'Successfull transaction'
+        ],200);
     }
 
     /**
