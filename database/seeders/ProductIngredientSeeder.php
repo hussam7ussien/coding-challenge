@@ -13,21 +13,21 @@ class ProductIngredientSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('product_ingredient')->insert([
+        DB::table('ingredient_product')->insert([
             'product_id' => 1,
             'ingredient_id' => 1,
             'quantity' => 150
         ]);
 
-        DB::table('product_ingredient')->insert([
+        DB::table('ingredient_product')->insert([
             'product_id' => 1,
             'ingredient_id' => 2,
             'quantity' => 30
         ]);
 
-        DB::table('product_ingredient')->insert([
+        DB::table('ingredient_product')->insert([
             'product_id' => 1,
-            'ingredient_id' => 2,
+            'ingredient_id' => 3,
             'quantity' => 20
         ]);
     }
