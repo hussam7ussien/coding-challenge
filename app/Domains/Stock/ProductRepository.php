@@ -12,7 +12,13 @@ class ProductRepository
     public function find($id){
         return $this->model->findOrFail($id);
     }
-
+    
+    /**
+     * get Ingredients For product
+     *
+     * @param  mixed $product
+     * @return void
+     */
     public function getIngredientsFor(Product $product){
         return $product->ingredients->toArray();
     }

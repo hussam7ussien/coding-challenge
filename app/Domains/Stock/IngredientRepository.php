@@ -8,8 +8,15 @@ class IngredientRepository
     {
         $this->model = $model;
     }
-
-    public function update_quantity($id,$quantity){
+    
+    /**
+     * Update Quantity
+     *
+     * @param  mixed $id
+     * @param  mixed $quantity
+     * @return void
+     */
+    public function updateQuantity($id,$quantity){
         $this->model::where('id', $id)
         ->update(['available_stock' => $quantity]);
     }

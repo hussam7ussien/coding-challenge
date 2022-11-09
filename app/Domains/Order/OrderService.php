@@ -16,7 +16,13 @@ class OrderService
         $this->order_repository = $order_repository;
         $this->stock_service = $stock_service;
     }
-
+    
+    /**
+     * Create Order
+     *
+     * @param  mixed $products
+     * @return void
+     */
     public function createOrder($products){
         $order = $this->order_repository->createOrder(self::USER_ID,$products);
         foreach ($products as $key => $product) {
