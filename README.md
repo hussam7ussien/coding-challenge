@@ -2,7 +2,7 @@
 
 - This project is created based on version 9.
 
-####Installatoin
+#### Installatoin
 
 * Clone the github repo to your machine.
 * Create a new database and update your .env varaibales as follows:
@@ -17,7 +17,7 @@
  * `php artisan migrate`
  * `php artisan db:seed`
 
-####Running Tests
+#### Running Tests
 * To run application tests open your terminal and run the following  `php artisan test`
 * If you have Postman installed:
  * Import the collection file `coding-challenge.postman_collection.json`
