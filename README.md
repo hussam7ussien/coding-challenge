@@ -25,4 +25,4 @@
  * Serve the application by running `php artisan serve`
  * Copy application url from the terminal `e.g. http://127.0.0.1:8000`
  * Update Postman base_url env variable with that url
- * Open `New Order` request and click send 
+ * Open `New Order` request and click send
