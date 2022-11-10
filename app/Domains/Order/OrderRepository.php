@@ -33,4 +33,8 @@ class OrderRepository
         $order->products()->attach($product_id,['quantity' => $quantity]); 
     }
 
+    public function count(){
+        return $this->model->count();
+    }
+
 }

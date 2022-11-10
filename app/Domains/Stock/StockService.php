@@ -3,13 +3,12 @@
 namespace App\Domains\Stock;
 use App\Domains\Stock\ProductRepository;
 use App\Domains\Stock\IngredientRepository;
-use Mail;
 /**
  * StockService
  */
 class StockService
 {
-
+    public $product_repository;
     public function __construct(
         ProductRepository $product_repository,
         IngredientRepository $ingredient_repository,
@@ -26,7 +25,7 @@ class StockService
      * @param  mixed $product
      * @return void
      */
-    private function getProductIngredients($product){
+    public function getProductIngredients($product){
         return $this->product_repository->getIngredientsFor($product);
     }
         

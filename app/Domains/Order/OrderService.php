@@ -7,7 +7,8 @@ use App\Domains\Stock\StockService;
 class OrderService
 {
     const USER_ID =  1;
-
+    public $order_repository;
+    public $stock_service;
     public function __construct(
         OrderRepository $order_repository,
         StockService $stock_service,
