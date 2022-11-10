@@ -6,7 +6,7 @@
 
 * Clone the github repo to your machine.
 * Create a new database and update your .env varaibales as follows:
-  * DB_CONNECTION=mysql
+ * DB_CONNECTION=mysql
  * DB_HOST=localhost
  * DB_PORT=3306
  * DB_DATABASE=DB_NAME
